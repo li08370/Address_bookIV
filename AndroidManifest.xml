@@ -10,15 +10,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AddressBook">
         <service
-            android:name=".AddAddressService"
-            android:enabled="true"
-            android:exported="true"></service>
+                android:name=".AddAddressService"
+                android:enabled="true"
+                android:exported="false"/>
 
         <activity android:name=".MainActivity">
+                  <!--android:label="RecycleView">-->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".AddingPage">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
     </application>
